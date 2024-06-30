@@ -16,7 +16,12 @@ ENCRYPT_KEY = os.getenv('ENCRYPT_KEY', default='_encrypt_secret_key_').encode()
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '[::1]',
+    'testserver',
+]
 
 
 # Application definition

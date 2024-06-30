@@ -9,13 +9,6 @@ class PasswordSerializer(serializers.ModelSerializer):
         model = Password
         fields = ('service_name', 'password')
 
-    def validate(self, data):
-        """Проверка на совпадение имени сервиса и пароля"""
-        if data['service_name'] == data['password']:
-            raise serializers.ValidationError(
-                'Fields must be different')
-        return data
-
     def to_representation(self, instance):
         """Расшифровывает пароль при получении данных."""
         data = super().to_representation(instance)

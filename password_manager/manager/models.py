@@ -4,7 +4,6 @@ from django.db import models
 class Password(models.Model):
     service_name = models.CharField(
         max_length=255,
-        # primary_key=True,
         unique=True,
         verbose_name='Название сервиса',
         )
