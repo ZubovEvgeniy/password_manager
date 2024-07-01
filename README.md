@@ -21,6 +21,15 @@ git clone git@github.com:ZubovEvgeniy/password_manager.git
 ##### Шаг 2. Заполнить файл переменных окружения
 В корне проекта создайте файл ".env" по образцу ".env.example"
 
+2.1 Сгенерировать ключ cryptography ENCRYPT_KEY
+
+В консоли shell введите последовательно:
+```bash
+from cryptography.fernet import Fernet
+cipher_key = Fernet.generate_key()
+print(cipher_key)
+```
+Полученный ключ добавьте в .env
 ##### Шаг 3.  Запуск контейнеров
 Из корня проекта запустите команду
 ```bash
@@ -45,13 +54,13 @@ docker-compose exec web python manage.py test
 Запрос:
 ``` json
 {
-    "password": "very_secret_pass"
+	"password": "very_secret_pass"
 }
 ```
 Ответ:
 ``` json
 {
-    "password": "very_secret_pass"
+	"password": "very_secret_pass"
 }
 ```
 
@@ -61,7 +70,7 @@ docker-compose exec web python manage.py test
 ``` json
 {
 	"service_name": "{service_name}",
-    "password": "very_secret_pass"
+	"password": "very_secret_pass"
 }
 ```
 
@@ -71,7 +80,7 @@ docker-compose exec web python manage.py test
 ``` json
 {
 	"service_name": "{service_name}",
-    "password": "very_secret_pass"
+	"password": "very_secret_pass"
 }
 ```
 **GET** http://localhost/password/
@@ -87,5 +96,7 @@ docker-compose exec web python manage.py test
 
 
 **Автор**
+
 Евгений Зубов
+
 2024
