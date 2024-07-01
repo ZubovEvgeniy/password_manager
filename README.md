@@ -45,13 +45,13 @@ docker-compose exec web python manage.py test
 Запрос:
 ``` json
 {
-    "password": "very_secret_pass"
+	"password": "very_secret_pass"
 }
 ```
 Ответ:
 ``` json
 {
-    "password": "very_secret_pass"
+	"password": "very_secret_pass"
 }
 ```
 
@@ -61,7 +61,7 @@ docker-compose exec web python manage.py test
 ``` json
 {
 	"service_name": "{service_name}",
-    "password": "very_secret_pass"
+	"password": "very_secret_pass"
 }
 ```
 
@@ -71,7 +71,7 @@ docker-compose exec web python manage.py test
 ``` json
 {
 	"service_name": "{service_name}",
-    "password": "very_secret_pass"
+	"password": "very_secret_pass"
 }
 ```
 **GET** http://localhost/password/
@@ -87,5 +87,7 @@ docker-compose exec web python manage.py test
 
 
 **Автор**
+
 Евгений Зубов
+
 2024
