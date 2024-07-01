@@ -69,7 +69,7 @@ class PasswordViewTest(TestCase):
         """Тестируем обновление существующего пароля."""
 
         updated_password = 'updatedpassword789'
-        response = self.client.post(
+        response = self.guest_client.post(
             f'/password/{self.service_name}/',
             {'password': updated_password}
             )
